@@ -8,4 +8,6 @@ Dir.glob(File.join(File.dirname(__FILE__),
   require filename
 end
 
+String.send :include, DecencyValidation::StringExtensions
+
 ActiveRecord::Base.class_eval { include DecencyValidation }

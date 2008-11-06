@@ -24,18 +24,16 @@ module DecencyValidation
       options.merge!(attribute_names.pop) if attribute_names.last.kind_of?(Hash)
       options.merge! :on => :save
       validates_each(attribute_names, options) do |record, attribute_name, value|
-        record.errors.add attribute_name, options[:message] unless DecentString.new(value.to_s).is_decent?
+        record.errors.add attribute_name, options[:message] unless value.to_s.is_decent?
       end
     end
   end
   
-  # TODO: just extend String to allow 'hello'.is_decent?
-  class DecentString < String
-    CUSSWORDS = %w(shit piss fuck cunt cocksucker motherfucker tits)
-    
+  module StringExtensions
+    INDECENT_WORDS = %w(shit piss fuck cunt cocksucker motherfucker tits)
     def is_decent?
       essence = self.downcase.gsub(/[^a-zA-Z]/, '')
-      CUSSWORDS.detect { |c| essence.include? c }.nil?
+      INDECENT_WORDS.detect { |c| essence.include? c }.nil?
     end
   end
   

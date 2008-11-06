@@ -4,11 +4,28 @@ DecencyValidation
 Uses George Carlin's list of "seven dirty words" to "check for decency" (ahem)
 http://en.wikipedia.org/wiki/Seven_dirty_words
 
+It gives you String#is_decent? and a new ActiveRecord validation, validates_decency_of.
+
 Example
 =======
+
+Using it from String...
+
+>> "hello world".is_decent?
+=> true
+
+>> "-s-h-i-t-t-y-".is_decent?
+=> false
+
+>> "the town of Scunthorpe".is_decent?
+=> false
+
+(sorry to the residents of http://en.wikipedia.org/wiki/Scunthorpe)
+
+Using it in ActiveRecord...
 
 class Message < ActiveRecord::Base
   validates_decency_of :title, :description
 end
 
-Copyright (c) 2008 Seamus Abshere. released under the MIT license
+Copyright (c) 2008 Seamus Abshere, released under the MIT license.
