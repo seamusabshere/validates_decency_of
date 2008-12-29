@@ -16,7 +16,7 @@ describe "IsDecent" do
     assert @decent.is_decent?
   end
   
-  it "should recognize decent strings" do
+  it "should recognize indecent strings" do
     assert !@indecent.is_decent?
   end
 end
