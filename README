@@ -6,6 +6,19 @@ http://en.wikipedia.org/wiki/Seven_dirty_words
 
 It gives you String#is_decent? and a new ActiveRecord validation, validates_decency_of.
 
+Installation
+============
+
+You should be able to run this as a plugin or as a gem.
+
+For environment.rb:
+
+config.gem 'seamusabshere-decency_validation', :lib => 'decency_validation', :source => 'http://gems.github.com'
+
+Then be sure to:
+
+rake gems:install
+
 Example
 =======
 
