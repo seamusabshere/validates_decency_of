@@ -1,4 +1,4 @@
-DecencyValidation
+ValidatesDecencyOf
 =================
 
 Uses George Carlin's list of "seven dirty words" to "check for decency" (ahem)
@@ -13,7 +13,7 @@ You should be able to run this as a plugin or as a gem.
 
 For environment.rb:
 
-config.gem 'seamusabshere-decency_validation', :lib => 'decency_validation', :source => 'http://gems.github.com'
+config.gem 'seamusabshere-validates_decency_of', :lib => 'validates_decency_of', :source => 'http://gems.github.com'
 
 Then be sure to:
 
@@ -41,4 +41,4 @@ class Message < ActiveRecord::Base
   validates_decency_of :title, :description
 end
 
-Copyright (c) 2008 Seamus Abshere, released under the MIT license.
+Copyright (c) 2009 Seamus Abshere, released under the MIT license.
