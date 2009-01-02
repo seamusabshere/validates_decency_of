@@ -1,3 +1,5 @@
+require 'is_decent'
+
 module ValidatesDecencyOf
   def self.included(base)
     base.extend(ClassMethods)

@@ -1,4 +1,4 @@
 # desc "Explaining what the task does"
-# task :decency_validation do
+# task :validates_decency_of do
 #   # Task goes here
 # end

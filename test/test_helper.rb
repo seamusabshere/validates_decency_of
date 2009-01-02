@@ -1,4 +1,4 @@
-module DecencyValidationTest
+module ValidatesDecencyOfTest
   module Initializer
     VENDOR_RAILS = File.expand_path('../../../../rails', __FILE__)
     OTHER_RAILS = File.expand_path('../../../rails', __FILE__)
@@ -27,7 +27,7 @@ module DecencyValidationTest
       require 'rubygems' rescue LoadError
       
       require 'test/spec'
-      require 'decency_validation'
+      require 'validates_decency_of'
     end
     
     def self.configure_database
@@ -57,7 +57,7 @@ module DecencyValidationTest
   end
 end
  
-DecencyValidationTest::Initializer.start
+ValidatesDecencyOfTest::Initializer.start
  
 class Message < ActiveRecord::Base
   validates_decency_of :title, :description
