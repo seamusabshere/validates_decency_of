@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name     = "decency_validation"
-  s.version  = "1.0"
-  s.date     = "2008-12-29"
+  s.version  = "1.1"
+  s.date     = "2009-01-02"
   s.summary  = "Rails plugin that uses George Carlin's list of seven dirty words (aka swear words, aka cuss words) to check for decency on ActiveRecord model attributes."
   s.email    = "seamus@abshere.net"
   s.homepage = "http://github.com/seamusabshere/decency_validation"
@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
     "Rakefile",
     "README",
     "tasks/decency_validation_tasks.rake",
+    "init.rb",
+    "rails/init.rb"
     ]
   s.test_files = [  
     "test/decency_validation_test.rb",
