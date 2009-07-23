@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name     = "validates_decency_of"
-  s.version  = "1.3"
+  s.version  = "1.4"
   s.date     = "2009-01-02"
   s.summary  = "Rails plugin that uses George Carlin's list of seven dirty words (aka swear words, aka cuss words) to check for decency on ActiveRecord model attributes."
   s.email    = "seamus@abshere.net"
