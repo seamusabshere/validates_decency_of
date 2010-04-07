@@ -28,7 +28,14 @@ class TestValidatesDecencyOf < Test::Unit::TestCase
   
   def test_should_disallow_indecent_strings
     assert_equal false, @indecent.valid?
-    assert @indecent.errors.on(:title)
-    assert @indecent.errors.on(:description)
+    if ActiveRecord::VERSION::MAJOR == 2
+      assert @indecent.errors.on(:title).present?
+      assert @indecent.errors.on(:description).present?
+    elsif ActiveRecord::VERSION::MAJOR == 3
+      assert @indecent.errors[:title].present?
+      assert @indecent.errors[:description].present?
+    else
+      raise "don't know what to do"
+    end
   end
 end
